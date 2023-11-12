@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-us">
+ <head>
+ <style>
+body {
+	background-color: #000;
+	background: url(bg.png) no-repeat center center fixed;
+	background-size: cover;
+}
+div {
+	margin: auto;
+	text-align: center;
+	white-space: nowrap;
+	padding-top: 52vh;
+}
+body > img {
+	position: fixed;
+	bottom: -50vw;
+	left: 10vw;
+	width: 25vw;
+	height: 25vw;
+	min-width: 35vh;
+	min-height: 35vh;
+	animation: cramer 10s linear forwards;
+}
+div > img {
+	cursor: pointer;
+	display: inline-block;
+	width: 7vw;
+	height: 7vw;
+	min-width: 10vh;
+	min-height: 10vh;
+	background-repeat: no-repeat;
+	filter: saturate(60%);
+	animation: pulsate 2s linear infinite;
+	transition: 0.3s;
+}
+div > img:hover {
+	margin: 0 1.2vh 1.2vh 1.2vh;
+	filter: saturate(100%);
+}
+@keyframes pulsate { 
+	0% { transform: scale(1); } 
+	50% { transform: scale(1.04); } 
+	100% { transform: scale(1); } 
+}
+@keyframes cramer { 
+	49% { bottom: -50vw; } 
+	50% { bottom: -25vw; } 
+	52% { bottom: -22vw; } 
+	54% { bottom: -15vw; } 
+	80% { bottom: -15vw; } 
+	82% { bottom: -18vw; } 
+	85% { bottom: 0vw; } 
+	87% { bottom: -1vw; } 
+	90% { bottom: 0vw; } 
+	95% { bottom: -25vw; } 
+} 
+ </style>
+ </head>
+ <body>
+  <div>
+   <img onclick="location.href='https://youtube.com/@cramer_wtf'" src="youtube.png" />
+   <img onclick="location.href='https://twitter.com/cramer_wtf'" src="twitter.png" />
+   <img onclick="location.href='https://reddit.com/r/cramer_wtf'" src="reddit.png" />
+   <img onclick="location.href='https://instagram.com/cramer.wtf'" src="instagram.png" />
+   <img onclick="location.href='https://tiktok.com/@cramer.wtf'" src="tiktok.png" />
+  </div>
+
+  <img src="cramer.png" />
+
+
+ </body>
+</html>
