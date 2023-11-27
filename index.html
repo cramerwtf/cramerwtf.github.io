@@ -16,7 +16,26 @@ div {
 	margin: auto;
 	text-align: center;
 	white-space: nowrap;
-	padding-top: 52vh;
+	padding-top: 43vh;
+}
+input {
+	display: block;
+	background-color: #000;
+	color: #fff;
+	border: 1vh groove #aaa;
+	font-variant: small-caps;
+	font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+	font-size: 3vh;
+	width: 25vw;
+	height: 5vh;
+	min-width: 2vw;
+	min-height: 2vw;
+	margin: 3vh auto 0 auto;
+	padding: 0 2vh 0 2vh;
+	min-width: 35vh;
+	outline: 0;
+	box-shadow: 0px 0px 1vh 1vh #000;
+	animation: glow 2s linear infinite;
 }
 body > img {
 	position: fixed;
@@ -44,6 +63,11 @@ div > img:hover {
 	margin: 0 1.2vh 1.2vh 1.2vh;
 	filter: saturate(100%);
 }
+@keyframes glow { 
+	0% { border-color: #aaa; color: #ccc; } 
+	50% { border-color: #eee; color: #fff; } 
+	100% { border-color: #aaa; color: #ccc; } 
+}
 @keyframes pulsate { 
 	0% { transform: scale(1); } 
 	50% { transform: scale(1.04); } 
@@ -67,7 +91,8 @@ div > img:hover {
 }
  </style>
  </head>
- <body>
+ <body onload="document.getElementById('search').focus()">
+  <input type="text" id="search" placeholder="[$SYM] Video search..." onclick="if(!navigator.userAgent.match(/android|iphone|ipad|ipod/i))return;window.open('https://www.youtube.com/@cramer_wtf');this.blur();" onkeyup="if((this.value=this.value.replace(/[^A-Z$]/gi,'').toUpperCase().trim())&&event.key==='Enter')window.open('https://www.youtube.com/@cramer_wtf/search?query='+encodeURIComponent(this.value.replace(/^\$/,'')));else if(this.value.length>0&&this.value[0]!='$')this.value='$'+this.value;" >
   <div>
    <img onclick="location.href='https://youtube.com/@cramer_wtf'" src="youtube.png" />
    <img onclick="location.href='https://twitter.com/cramer_wtf'" src="twitter.png" />
