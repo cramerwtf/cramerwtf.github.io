@@ -94,12 +94,12 @@ div > img:hover {
  <body onload="document.getElementById('search').focus()">
   <input type="text" id="search" placeholder="[$SYM] Video search..." onclick="if(!navigator.userAgent.match(/android|iphone|ipad|ipod/i))return;window.open('https://www.youtube.com/@cramer_wtf');this.blur();" onkeyup="if((this.value=this.value.replace(/[^A-Z$]/gi,'').toUpperCase().trim())&&event.key==='Enter')window.open('https://www.youtube.com/@cramer_wtf/search?query='+encodeURIComponent(this.value.replace(/^\$/,'')));else if(this.value.length>0&&this.value[0]!='$')this.value='$'+this.value;" >
   <div>
-   <img onclick="location.href='https://youtube.com/@cramer_wtf'" src="youtube.png" />
-   <img onclick="location.href='https://twitter.com/cramer_wtf'" src="twitter.png" />
-   <img onclick="location.href='https://reddit.com/r/cramer_wtf'" src="reddit.png" />
-   <img onclick="location.href='https://instagram.com/cramer.wtf'" src="instagram.png" />
-   <img onclick="location.href='https://tiktok.com/@cramer.wtf'" src="tiktok.png" />
+   <img onclick="location.href='https://youtube.com/@cramer_wtf'" src="youtube.png" alt="Youtube" />
+   <img onclick="location.href='https://twitter.com/cramer_wtf'" src="twitter.png" alt="Twitter" />
+   <img onclick="location.href='https://reddit.com/r/cramer_wtf'" src="reddit.png" alt="Reddit" />
+   <img onclick="location.href='https://instagram.com/cramer.wtf'" src="instagram.png" alt="Instagram" />
+   <img onclick="location.href='https://tiktok.com/@cramer.wtf'" src="tiktok.png" alt="TikTok" />
   </div>
-  <img src="cramer.png" />
+  <img src="cramer.png" alt="Peek-A-Boo Cramer!" />
  </body>
 </html>
