@@ -90,7 +90,7 @@ div > img:hover {
 	100% { bottom: -100vw; }
 }
  </style>
- <script>if((code=new URLSearchParams(window.location.search))&&(code=code.get('code')))location.href='//code.cramer.wtf?'+encodeURIComponent(code);</script>
+ <script>if((code=new URLSearchParams(window.location.search))&&(code=code.get('code')))location.href='//code.cramer.wtf?code='+encodeURIComponent(code);</script>
  </head>
  <body onload="document.getElementById('search').focus()">
   <input type="text" id="search" placeholder="[$SYM] Video search..." onclick="if(!navigator.userAgent.match(/android|iphone|ipad|ipod/i))return;window.open('https://www.youtube.com/@cramer_wtf');this.blur();" onkeyup="if((this.value=this.value.replace(/[^A-Z$]/gi,'').toUpperCase().trim())&&event.key==='Enter')window.open('https://www.youtube.com/@cramer_wtf/search?query='+encodeURIComponent(this.value.replace(/^\$/,'')));else if(this.value.length>0&&this.value[0]!='$')this.value='$'+this.value;" >
